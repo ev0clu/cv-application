@@ -1,0 +1,24 @@
+.form {
+  width: 30rem;
+}
+
+.input-textarea {
+  height: 5rem;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.personal,
+.stack,
+.experience,
+.education {
+  display: flex;
+  flex-direction: column;
+}
+
+textarea {
+  resize: none;
+}
