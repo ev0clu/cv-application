@@ -7,13 +7,20 @@ import Education from './Education';
 
 import '../../assets/styles/CVForm.css';
 
-const CVForm = () => {
+const CVForm = (props) => {
+    const { stacks, handleChange, handleAddClick, handleDeleteClick } = props;
+
     return (
         <form className="form">
             <Personal />
-            <Stack />
-            <Experience />
-            <Education />
+            <Stack
+                stacks={stacks}
+                handleChange={handleChange}
+                handleAddClick={handleAddClick}
+                handleDeleteClick={handleDeleteClick}
+            />
+            {/* <Experience />*/}
+            {/*<Education />*/}
         </form>
     );
 };

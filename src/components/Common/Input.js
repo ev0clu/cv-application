@@ -1,13 +1,17 @@
 import React from 'react';
 
 const Input = (props) => {
-    const { className, type, name, placeholder, value } = props;
+    const { handleChange, className, type, name, placeholder, key, value } =
+        props;
+
     return (
         <input
+            onChange={handleChange}
             className={className}
             type={type}
             name={name}
             placeholder={placeholder}
+            key={key}
             value={value}
         />
     );

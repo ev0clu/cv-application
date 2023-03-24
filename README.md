@@ -8,8 +8,9 @@ CV Application has built which let the user to create own resume with preview.
 
 ### Developement dependencies
 
-- [React](https://react.dev/)
-- [React Icons](https://www.npmjs.com/package/react-icons)
+-   [React](https://react.dev/)
+-   [React Icons](https://www.npmjs.com/package/react-icons)
+-   [uniqid](https://www.npmjs.com/package/uniqid)
 
 ### Layout
 
