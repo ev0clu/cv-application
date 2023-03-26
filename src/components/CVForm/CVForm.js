@@ -8,19 +8,29 @@ import Education from './Education';
 import '../../assets/styles/CVForm.css';
 
 const CVForm = (props) => {
-    const { stacks, handleChange, handleAddClick, handleDeleteClick } = props;
+    const { form, handleChange, handleAddClick, handleDeleteClick } = props;
 
     return (
         <form className="form">
-            <Personal />
+            <Personal personal={form} handleChange={handleChange} />
             <Stack
-                stacks={stacks}
+                stacks={form.stack}
                 handleChange={handleChange}
                 handleAddClick={handleAddClick}
                 handleDeleteClick={handleDeleteClick}
             />
-            {/* <Experience />*/}
-            {/*<Education />*/}
+            <Experience
+                experiences={form.experience}
+                handleChange={handleChange}
+                handleAddClick={handleAddClick}
+                handleDeleteClick={handleDeleteClick}
+            />
+            <Education
+                educations={form.education}
+                handleChange={handleChange}
+                handleAddClick={handleAddClick}
+                handleDeleteClick={handleDeleteClick}
+            />
         </form>
     );
 };

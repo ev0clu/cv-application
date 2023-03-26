@@ -8,10 +8,10 @@ const Stack = (props) => {
     return (
         <div className="stack">
             <h1>Stack</h1>
-            {stacks.map((stack, index) => {
+            {stacks.map((element, index) => {
                 return (
                     <div
-                        key={stack.id}
+                        key={element.id}
                         className="stack-group"
                         data-index={index}
                     >
@@ -20,7 +20,7 @@ const Stack = (props) => {
                             type="text"
                             name="stack"
                             placeholder="Stack"
-                            value={stack.text}
+                            value={element.stack}
                             handleChange={handleChange}
                         />
                         <Button

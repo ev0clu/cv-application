@@ -5,11 +5,11 @@ import CVPreview from './CVPreview/CVPreview';
 import '../assets/styles/Main.css';
 
 const Main = (props) => {
-    const { stacks, handleChange, handleAddClick, handleDeleteClick } = props;
+    const { form, handleChange, handleAddClick, handleDeleteClick } = props;
     return (
         <main className="main">
             <CVForm
-                stacks={stacks}
+                form={form}
                 handleChange={handleChange}
                 handleAddClick={handleAddClick}
                 handleDeleteClick={handleDeleteClick}
