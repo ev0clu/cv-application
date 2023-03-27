@@ -33,11 +33,11 @@ const Personal = (props) => {
                 handleChange={handleChange}
             />
             <Input
-                className="input-address"
+                className="input-location"
                 type="text"
-                name="address"
-                placeholder="Address"
-                value={personal.address}
+                name="location"
+                placeholder="Location"
+                value={personal.location}
                 handleChange={handleChange}
             />
             <Input

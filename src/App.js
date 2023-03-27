@@ -14,7 +14,7 @@ class App extends Component {
                 firstName: '',
                 lastName: '',
                 title: '',
-                address: '',
+                location: '',
                 phone: '',
                 email: '',
                 website: '',
@@ -27,18 +27,25 @@ class App extends Component {
         };
     }
 
-    handleChange = (e) => {
-        const personal = [this.state.form];
+    handlePersonalInfoChange = (e) => {
+        const name = e.target.name;
+        const value = e.target.value;
+
+        this.setState({
+            form: {
+                ...this.state.form,
+                [name]: value
+            }
+        });
+    };
+
+    handleGeneralInfoChange = (e) => {
         const stack = [...this.state.form.stack];
         const experience = [...this.state.form.experience];
         const education = [...this.state.form.education];
 
         const i = e.target.parentNode.getAttribute('data-index');
         const name = e.target.name;
-
-        if (e.target.parentNode.classList.contains('personal')) {
-            personal[`${name}`] = e.target.value;
-        }
 
         if (e.target.parentNode.parentNode.classList.contains('stack')) {
             stack[i][`${name}`] = e.target.value;
@@ -54,7 +61,7 @@ class App extends Component {
 
         this.setState({
             form: {
-                personal,
+                ...this.state.form,
                 stack,
                 experience,
                 education
@@ -97,6 +104,7 @@ class App extends Component {
 
         this.setState({
             form: {
+                ...this.state.form,
                 stack,
                 experience,
                 education
@@ -126,9 +134,84 @@ class App extends Component {
 
         this.setState({
             form: {
+                ...this.state.form,
                 stack,
                 experience,
                 education
+            }
+        });
+    };
+
+    handleExampleClick = (e) => {
+        e.preventDefault();
+
+        this.setState({
+            form: {
+                firstName: 'John',
+                lastName: 'Doe',
+                title: 'Senior Frontend Developer',
+                location: 'London, UK',
+                phone: '+12 3456789',
+                email: 'john.doe@gmail.com',
+                website: 'https://example.com',
+                github: 'https://github.com/ev0clu',
+                description:
+                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque eleifend donec pretium vulputate sapien nec sagittis aliquam.',
+                stack: [
+                    { stack: 'HTML', id: uniqid() },
+                    { stack: 'CSS', id: uniqid() },
+                    { stack: 'JS', id: uniqid() },
+                    { stack: 'React', id: uniqid() }
+                ],
+                experience: [
+                    {
+                        position: 'Senior Frontend Developer',
+                        company: 'Example Company',
+                        city: 'London, UK',
+                        from: '2020',
+                        to: '2023',
+                        id: uniqid()
+                    },
+                    {
+                        position: 'Junior Frontend Developer',
+                        company: 'Example Company',
+                        city: 'London, UK',
+                        from: '2015',
+                        to: '2020',
+                        id: uniqid()
+                    }
+                ],
+                education: [
+                    {
+                        university: 'University Example',
+                        location: 'London, UK',
+                        degree: 'MSc Web Developement',
+                        from: '2009',
+                        to: '2015',
+                        id: uniqid()
+                    }
+                ]
+            }
+        });
+    };
+
+    handleResetClick = (e) => {
+        e.preventDefault();
+
+        this.setState({
+            form: {
+                firstName: '',
+                lastName: '',
+                title: '',
+                location: '',
+                phone: '',
+                email: '',
+                website: '',
+                github: '',
+                description: '',
+                stack: [],
+                experience: [],
+                education: []
             }
         });
     };
@@ -140,9 +223,12 @@ class App extends Component {
                 <Header />
                 <Main
                     form={form}
-                    handleChange={this.handleChange}
+                    handlePersonalInfoChange={this.handlePersonalInfoChange}
+                    handleGeneralInfoChange={this.handleGeneralInfoChange}
                     handleAddClick={this.handleAddClick}
                     handleDeleteClick={this.handleDeleteClick}
+                    handleExampleClick={this.handleExampleClick}
+                    handleResetClick={this.handleResetClick}
                 />
                 <Footer />
             </div>
