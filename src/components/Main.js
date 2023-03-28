@@ -25,7 +25,7 @@ const Main = (props) => {
                 handleExampleClick={handleExampleClick}
                 handleResetClick={handleResetClick}
             />
-            <CVPreview />
+            <CVPreview form={form} />
         </main>
     );
 };

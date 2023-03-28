@@ -156,7 +156,7 @@ class App extends Component {
                 website: 'https://example.com',
                 github: 'https://github.com/ev0clu',
                 description:
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque eleifend donec pretium vulputate sapien nec sagittis aliquam.',
+                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec ultrices tincidunt arcu non sodales neque sodales ut etiam. Commodo viverra maecenas accumsan lacus vel facilisis volutpat. Amet venenatis urna cursus eget. Suspendisse faucibus interdum posuere lorem. Interdum consectetur libero id faucibus nisl. Sagittis vitae et leo duis ut diam quam. Senectus et netus et malesuada fames ac turpis egestas. Lectus proin nibh nisl condimentum. Sollicitudin tempor id eu nisl nunc.',
                 stack: [
                     { stack: 'HTML', id: uniqid() },
                     { stack: 'CSS', id: uniqid() },
