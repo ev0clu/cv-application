@@ -62,6 +62,10 @@
     margin: 1rem 3rem 3rem 3rem;
 }
 
+.preview-content h1 {
+    color: #155e75;
+}
+
 .preview-stack {
     display: flex;
     flex-direction: row;
