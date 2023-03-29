@@ -10,6 +10,7 @@ CV Application has built which let the user to create own resume with preview.
 
 -   [React](https://react.dev/)
 -   [React Icons](https://www.npmjs.com/package/react-icons)
+-   [React to Print](https://www.npmjs.com/package/react-to-print)
 -   [uniqid](https://www.npmjs.com/package/uniqid)
 
 ### Layout

@@ -7,6 +7,7 @@ import uniqid from 'uniqid';
 import '../src/assets/styles/App.css';
 
 class App extends Component {
+    componentRef = null;
     constructor(prop) {
         super(prop);
         this.state = {
@@ -218,6 +219,7 @@ class App extends Component {
 
     render() {
         const { form } = this.state;
+
         return (
             <div>
                 <Header />
